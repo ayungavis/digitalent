@@ -1,0 +1,19 @@
+Time : 18:18:52
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'timestamp' in 'order clause'
+Raw SQL : SELECT diagnosis, time FROM patient_data WHERE user_id = :user_id ORDER BY timestamp DESC LIMIT 3
+
+Time : 17:44:33
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : SELECT p_id FROM patient_data WHERE user_id = :user_id
+
+Time : 17:28:06
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'fname' cannot be null
+Raw SQL : INSERT INTO user VALUES (null, :email, :username, :password, :dob, :age, null, null)
+
+Time : 17:26:39
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'dob' cannot be null
+Raw SQL : INSERT INTO user VALUES (null, :email, :username, :password, null, null, null, null)
+
+Time : 17:22:56
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT username FROM user WHERE username = :username
